@@ -26,6 +26,9 @@ public final class ActionInstance {
         return this.durationSupplier.getAsInt();
     }
 
+    // Je pense que c'est une mauvaise façon de faire, mais ça corrige la loi de demeter
+    public String getActionName() { return this.action.getName(); }
+
     @Override
     public final String toString() {
         return "ActionInstance{" +

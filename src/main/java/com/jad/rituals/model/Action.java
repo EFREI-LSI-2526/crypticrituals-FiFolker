@@ -33,6 +33,10 @@ public enum Action {
         this.defaultDurationMs = defaultDurationMs;
     }
 
+    public static int getLength(){
+        return Action.values().length;
+    }
+
     @Override
     public final String toString() {
         return "Action{" +

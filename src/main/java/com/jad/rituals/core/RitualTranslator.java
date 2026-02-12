@@ -26,7 +26,7 @@ public class RitualTranslator {
             char c1 = currAction.charAt(0);
             char c2 = currAction.charAt(1);
 
-            int index = ((int) c1 + 3 * (int) c2) % Action.values().length;
+            int index = ((int) c1 + 3 * (int) c2) % Action.getLength();
 
             Action action = Action.values()[index];
             ActionInstance actionInstance = ActionInstance.of(action);

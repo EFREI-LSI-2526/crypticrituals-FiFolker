@@ -10,7 +10,7 @@ public class RitualExecutor {
     }
 
     public final void execute(ActionInstance actionInstance) {
-        System.out.println("-> " + actionInstance.getAction().getName() + "...");
+        System.out.println("-> " + actionInstance.getActionName() + "...");
         try {
             Thread.sleep(actionInstance.getDuration());
         } catch (InterruptedException e) {
