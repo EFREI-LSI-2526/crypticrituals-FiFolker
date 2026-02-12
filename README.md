@@ -36,15 +36,15 @@ Chaque paire `XY` est d’abord transformée en un **index d’action**.
 
 ### 2.2 Formule de calcul
 
-\[
+$$
 \text{index} = (c1 + 3 \cdot c2) \bmod \text{Action.values().length}
-\]
+$$
 
 ### 2.3 Sélection de l’action
 
-\[
+$$
 \text{action} = \text{Action.values()}[\text{index}]
-\]
+$$
 
 **Cette étape est toujours appliquée**, même si `Y` est un symbole spécial.  
 Les symboles spéciaux modifient ensuite l’action obtenue.

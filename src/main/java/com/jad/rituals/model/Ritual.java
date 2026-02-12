@@ -16,6 +16,10 @@ public class Ritual {
         this.actions.add(actionInstance);
     }
 
+    public final void addAction(final int insertPos,final ActionInstance actionInstance) {
+        this.actions.add(insertPos, actionInstance);
+    }
+
     @Override
     public final String toString() {
         return "Ritual{" +
