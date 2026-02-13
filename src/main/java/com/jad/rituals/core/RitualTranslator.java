@@ -17,7 +17,7 @@ public class RitualTranslator {
         String ritualCryptic = ritual.getCrypticString().replaceAll("\\s", "");
         int n = 2;
 
-        ActionInstance toAdd = null;
+        List<ActionInstance> toAdds = new ArrayList<>();
         for(int i = 0; i < length; i += n){
             if(ritualCryptic.length() - i < 2) break;
 
@@ -40,7 +40,7 @@ public class RitualTranslator {
                 case '?':
                     final int size = ritual.getActions().size();
                     if(size == 0){
-                        toAdd = actionInstance;
+                        toAdds.add(actionInstance);
                     }else{
                         ritual.addAction(size-1, actionInstance);
                     }
@@ -63,7 +63,9 @@ public class RitualTranslator {
 
         }
 
-        if(toAdd != null) ritual.addAction(toAdd);
+        for(ActionInstance a : toAdds){
+            ritual.addAction(a);
+        }
 
         return ritual;
     }
